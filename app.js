@@ -17,7 +17,21 @@ function getRandomInt(min, max) {
 button.addEventListener('click', ()=>{
     remainingGuess --;
     guessRemainingText.innerText = `${remainingGuess} left`;
-    console.log(guessRemainingText);
+    //console.log(guessRemainingText);
+    let num = Number(numberInput.value);
+    //console.log(num);
+    if (num === correctNumber) {
+        let guess = 'YOU WIN B*TCH'} 
+        else if (remainingGuess > 4) {
+        let guess = 'You are out of guesses-tuff luck bud!'} 
+        else if (num > correctNumber) {
+        let guess = 'Too low!'} 
+        else if (num < correctNumber) {
+        let guess = 'Too High!'}
+        const resultText = ` ${guess}`;
+        result.textContent = resultText;
+    
+    
 });
 
 
