@@ -15,19 +15,19 @@ function getRandomInt(min, max) {
 //write function so its a random number between 1-20
 
 button.addEventListener('click', ()=>{
-    remainingGuess --;
-    guessRemainingText.innerText = `${remainingGuess} left`;
+   if (remainingGuess >= 0) remainingGuess-- ;
+    guessRemainingText.innerText = `${guessRemainingText} left`;
     //console.log(guessRemainingText);
     let num = Number(numberInput.value);
     let guess;
     //console.log(num);
     if (num === correctNumber) {
          guess = 'YOU WIN B*TCH'} 
-        else if (remainingGuess > 4) {
+        else if (remainingGuess <= 0) {
          guess = 'You are out of guesses-tuff luck bud!'} 
-        else if (num > correctNumber) {
-         guess = 'Too low!'} 
         else if (num < correctNumber) {
+         guess = 'Too low!'} 
+        else if (num > correctNumber) {
          guess = 'Too High!'}
          //console.log(guess);
         const resultText = `${guess}`;

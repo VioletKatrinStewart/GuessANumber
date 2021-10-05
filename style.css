@@ -4,3 +4,6 @@ body {
     align-items: center;
     padding: 20px;
 }
+* {
+    color: rgb(219, 111, 129);
+}
