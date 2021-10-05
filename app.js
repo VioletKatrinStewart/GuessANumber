@@ -19,16 +19,18 @@ button.addEventListener('click', ()=>{
     guessRemainingText.innerText = `${remainingGuess} left`;
     //console.log(guessRemainingText);
     let num = Number(numberInput.value);
+    let guess;
     //console.log(num);
     if (num === correctNumber) {
-        let guess = 'YOU WIN B*TCH'} 
+         guess = 'YOU WIN B*TCH'} 
         else if (remainingGuess > 4) {
-        let guess = 'You are out of guesses-tuff luck bud!'} 
+         guess = 'You are out of guesses-tuff luck bud!'} 
         else if (num > correctNumber) {
-        let guess = 'Too low!'} 
+         guess = 'Too low!'} 
         else if (num < correctNumber) {
-        let guess = 'Too High!'}
-        const resultText = ` ${guess}`;
+         guess = 'Too High!'}
+         //console.log(guess);
+        const resultText = `${guess}`;
         result.textContent = resultText;
     
     
