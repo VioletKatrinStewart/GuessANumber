@@ -2,8 +2,13 @@ const submitButton = document.getElementById('button');
 const numberInput = document.getElementById('number-input');
 const result = document.getElementById('result');
 const guessRemainingText = document.getElementById('remaining-guess');
+const winSpan = document.getElementById('wins');
+const lossSpan = document.getElementById('losses');
 
-let remainingGuess = 4
+let wins = 0;
+let losses = 0;
+
+let remainingGuess = 4;
 let correctNumber = getRandomInt(1, 21);
 //console.log(correctNum); 
 
