@@ -1,4 +1,5 @@
 const submitButton = document.getElementById('button');
+const resetButton = document.getElementById('reset');
 const numberInput = document.getElementById('number-input');
 const result = document.getElementById('result');
 const guessRemainingText = document.getElementById('remaining-guess');
@@ -20,8 +21,8 @@ function getRandomInt(min, max) {
 //write function so its a random number between 1-20
 
 button.addEventListener('click', ()=>{
-   if (remainingGuess > 0) remainingGuess-- ;
-
+    if (remainingGuess > 0) remainingGuess-- ;
+    
     guessRemainingText.textContent = `${remainingGuess} left`;
     //console.log(guessRemainingText);
     let num = Number(numberInput.value);
@@ -44,8 +45,11 @@ button.addEventListener('click', ()=>{
          //console.log(guess);
         const resultText = `${guess}`;
         result.textContent = resultText;
-    
-    
 });
 
-
+resetButton.addEventListener('click', ()=>{
+    winSpan.textContent = '0';
+    lossSpan.textContent = '0';
+    guessRemainingText.textContent = '';
+    result.textContent = '';
+});
