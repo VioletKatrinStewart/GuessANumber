@@ -16,7 +16,7 @@ function getRandomInt(min, max) {
 
 button.addEventListener('click', ()=>{
    if (remainingGuess >= 0) remainingGuess-- ;
-    guessRemainingText.innerText = `${guessRemainingText} left`;
+    guessRemainingText.textContent = `${remainingGuess} left`;
     //console.log(guessRemainingText);
     let num = Number(numberInput.value);
     let guess;
